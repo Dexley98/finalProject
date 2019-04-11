@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title tags
+    link(rel="stylesheet", type="text/css", href="../../css/layout.css")
+
+  body
+    h1 Related Products 
+    label Products under #{tags.tagName} Tag:
+      ul
+      each entry in productList
+        each product in products
+          if entry.productId == product.id
+            li
+              a(href="/product/" + product.id) #{product.productName}
+
+    br
+    a(href="/") back to list

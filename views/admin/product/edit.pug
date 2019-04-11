@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Edit Product
+    link(rel="stylesheet", type="text/css", href="../../../css/layout.css")
+
+  body
+    form(method="POST")
+
+      label Product Name:
+        input(type="text" name="productName" value=product.productName)
+
+      br
+      label Description:
+        input(type="text" name="description" value=product.description)
+
+      br
+      label Image:
+        input(type="text" name="image" value=product.image)
+
+      br
+      label Price:
+        input(type="text" name="price" value=product.price)
+
+      br
+      label Category:
+        select(name="dropDown")
+          each category in categories
+            option(value=category.id) #{category.categoryName}
+
+      br
+      label Tags:
+      each tag in tags
+          br
+          label #{tag.tagName}
+          input(type="checkbox" name="tags" value=tag.id)
+
+      br
+      button(type="submit") Submit
+
+      br
+      a(href="/admin/product/") Cancel

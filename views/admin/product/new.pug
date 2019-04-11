@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Add New Product
+    link(rel="stylesheet", type="text/css", href="../../../css/layout.css")
+
+  body
+    form(method="POST")
+      label Product Name:
+        input(type="text" name="productName")
+
+      br
+      label Description:
+        input(type="text" name="description")
+
+      br
+      label Image:
+        input(type="text" name="image")
+
+      br
+      label Price:
+        input(type="number" min="0" step="0.01" name="price")
+
+      br
+      label Category:
+        select(name="dropDown")
+          each category in categories
+            option(value=category.id) #{category.categoryName}
+
+      br
+      label Tags:
+      each tag in tags
+          br
+          label #{tag.tagName}
+          input(type="checkbox" name="tags" value=tag.id)
+
+
+      br
+      button(type="submit") Submit
+
+    br
+    a(href="/admin/product/") Cancel

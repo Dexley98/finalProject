@@ -1,0 +1,42 @@
+body{
+  background-color: papayawhip;
+  font-family: helvitica, sans-serif;
+  font-size: 18px;
+  color: darkgray;
+}
+
+h1, h2, h3{
+  font-weight: bold;
+  color: turquoise;
+}
+
+p{
+  padding: 30px;
+}
+
+button {
+  width: 75px;
+  font-size: 16px;
+  color: white;
+  background-color: turquoise;
+}
+
+a{
+  color: white;
+  background-color: turquoise;
+}
+
+a:hover{
+  color: papayawhip;
+}
+
+li a {
+  color: white;
+  font-size:  18px;
+  background-color: darkgray;
+  text-decoration: none;
+}
+
+li a:hover{
+  color: turquoise;
+}

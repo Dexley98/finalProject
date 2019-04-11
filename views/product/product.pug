@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Detail
+    link(rel="stylesheet", type="text/css", href="../../css/layout.css")
+
+  body
+    h1 Product Detail View
+    ul
+      li Name: #{product.productName}
+      li Description: #{product.description}
+      li Image:
+        div
+          img(src=product.image width='400' height='400')
+
+      li Related Tags:
+        ul
+          each productTag in productTags
+            each tag in tags
+              if productTag.tagId == tag.id
+                li
+                  a(href="/product/tag/" + tag.id) #{tag.tagName}
+
+    br
+    a(href="/") back to list
