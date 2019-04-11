@@ -1,0 +1,30 @@
+{
+  "name": "afc-east",
+  "version": "1.0.0",
+  "description": "wiki on all of the afc-east football teams",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dexley98/finalProject.git"
+  },
+  "keywords": [
+    "football"
+  ],
+  "author": "Dom Exley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dexley98/finalProject/issues"
+  },
+  "homepage": "https://github.com/Dexley98/finalProject#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.18.11",
+    "pug": "^2.0.3",
+    "sequelize": "^5.3.1"
+  }
+}
