@@ -15,8 +15,12 @@ const Coach = sequelize.define('coach', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  bio : {
+  image : {
     type: Sequelize.STRING,
+    allowNull: false
+  },
+  bio : {
+    type: Sequelize.TEXT,
     allowNull: false
   },
   stat1 : {

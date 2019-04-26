@@ -16,6 +16,10 @@ const Player = sequelize.define('player', {
     allowNull: false
   },
   bio : {
+    type: Sequelize.TEXT,
+    allowNull: false
+  },
+  image : {
     type: Sequelize.STRING,
     allowNull: false
   },

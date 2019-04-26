@@ -2,27 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Sequelize = require('sequelize');
 const sequelize = require('../utils/sequelize');
-const Product = require ('../models/Team');
-const Category = require ('../models/Category');
-const Team = require ('../models/Team.js');
+const Team = require ('../models/Team');
 
 router.get('/', (req,res)=>{
-  /*
-  Product.findAll()
-  .then((products) =>{
-    Category.findAll()
-    .then((cats) =>{
-      res.render('index.pug', {products: products, cats: cats});
-    })
-      .catch((err) =>{
-        console.log('Error getting cats', err);
-      });
-  })
-    .catch((err) =>{
-      console.log('Error getting products', err);
-    });
 
-*/
   Team.findAll()
     .then((teams) => {
       console.log('HERES THOSE TEAMS' + teams);
@@ -33,5 +16,11 @@ router.get('/', (req,res)=>{
       console.log('unable to get teams');
     });
 });
+
+
+router.get('/logout', (req, res) => {
+
+});
+
 
 module.exports = router;

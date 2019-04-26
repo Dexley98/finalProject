@@ -6,19 +6,22 @@ html
 
   body
 
-    h1
+    h1(class='home')
       a(href="/") AFC EAST
-    button login
-    button register
     br
     br
-    a(href="/team") Teams
-    a(href="/players") Players
-    a(href="/coaches") Coaches
+    ul(class='nav')
+      li
+        a(href="/team") Teams
+      li
+        a(href="/players") Players
+      li
+        a(href="/coaches") Coaches
     br
 
+
     h2 #{player.playerName}
-    p image placeholder
+    img(src=player.image width='300' height'300')
     p #{player.bio}
     label Stats
     ul

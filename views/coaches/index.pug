@@ -6,25 +6,27 @@ html
 
   body
 
-    h1
+    h1(class='home')
       a(href="/") AFC EAST
-    button login
-    button register
     br
     br
-    a(href="/team") Teams
-    a(href="/players") Players
-    a(href="/coaches") Coaches
+    ul(class='nav')
+      li
+        a(href="/team") Teams
+      li
+        a(href="/players") Players
+      li
+        a(href="/coaches") Coaches
     br
+
 
     h2 Coaches
 
     each coach in coaches
+      h3(class="coachName") #{coach.coachName}
       each team in teams
-        h3 #{coach.coachName}
-        p #{coach.bio}
-        if team.id == coach.teamId
+        if coach.teamId == team.id
           p coached for:
             a(href="/team/" + team.id)  #{team.teamName}
-        h4
-          a(href="/coaches/" + coach.id) Profile
+      h4
+        a(href="/coaches/" + coach.id) Profile

@@ -1,29 +1,33 @@
 body{
-  background-color: papayawhip;
+  background-color: #f4f4f4;
   font-family: helvitica, sans-serif;
-  font-size: 18px;
-  color: darkgray;
-}
-
-h1, h2, h3{
-  font-weight: bold;
-  color: turquoise;
+  font-size: 14px;
+  color: #373737;
+  margin: 32px;
 }
 
 p{
-  padding: 30px;
+  padding: 5px;
 }
 
-button {
-  width: 75px;
-  font-size: 16px;
-  color: white;
-  background-color: turquoise;
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  color: #c0b283;
+}
+
+h1{
+  font-size: 48px;
+}
+
+h2{
+  text-align: center;
+  font-size: 36px;
+  color: #373737;
 }
 
 a{
-  color: white;
-  background-color: turquoise;
+  color: #373737;
+  background-color: #c0b283;
 }
 
 a:hover{
@@ -33,10 +37,37 @@ a:hover{
 li a {
   color: white;
   font-size:  18px;
-  background-color: darkgray;
+  background-color: #373737;
   text-decoration: none;
 }
 
 li a:hover{
-  color: turquoise;
+  color: #dcd0c0;
+}
+
+.nav{
+  text-align: center;
+}
+.nav li {
+  text-align: center;
+  display: inline;
+  padding: 5px;
+}
+
+.nav li a{
+  font-size: 32px;
+}
+
+.playerName, .coachName{
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.home{
+  text-align: center;
+}
+
+.teams{
+  text-align: center;
+  font-size: 32px;
 }

@@ -5,16 +5,19 @@ html
     link(rel="stylesheet", type="text/css", href="/css/layout.css")
 
   body
-    h1
+    h1(class='home')
       a(href="/") AFC EAST
-    button login
-    button register
     br
     br
-    a(href="/team") Teams
-    a(href="/players") Players
-    a(href="/coaches") Coaches
+    ul(class='nav')
+      li
+        a(href="/team") Teams
+      li
+        a(href="/players") Players
+      li
+        a(href="/coaches") Coaches
     br
+
 
     h2 #{team.teamName}
     img(src=team.teamLogo width='250' height='250')
@@ -23,8 +26,9 @@ html
     p #{team.history}
     h3 Present
     p Record: #{team.record}
-    p Touchdowns: #{team.touchdowns}
-    p total Yards: #{team.totalYards}
+    p #{team.stat1}
+    p #{team.stat2}
+    p #{team.stat3}
     h3 Notable Players
     ul
       each player in players

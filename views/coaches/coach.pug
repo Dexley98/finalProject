@@ -5,20 +5,23 @@ html
     link(rel="stylesheet", type="text/css", href="/css/layout.css")
 
   body
-
-    h1
+    h1(class='home')
       a(href="/") AFC EAST
-    button login
-    button register
     br
     br
-    a(href="/team") Teams
-    a(href="/players") Players
-    a(href="/coaches") Coaches
+
+    ul(class='nav')
+      li
+        a(href="/team") Teams
+      li
+        a(href="/players") Players
+      li
+        a(href="/coaches") Coaches
     br
+
 
     h2 #{coach.coachName}
-    p image placeholder
+    img(src=coach.image width='300' height'300')
     p #{coach.bio}
     label Stats
     ul

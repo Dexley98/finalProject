@@ -17,45 +17,25 @@ const Team = sequelize.define('team', {
     allowNull: false
   },
   history : {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   record : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  touchdowns : {
-    type: Sequelize.BIGINT,
-    allowNull: false
-  },
-  totalYards : {
-    type: Sequelize.BIGINT,
-    allowNull: false
-  },
-  player1 : {
+  stat1 : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  player2 : {
+  stat2 : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  player3 : {
+  stat3 : {
     type: Sequelize.STRING,
     allowNull: false
-  },
-  coach1 : {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  coach2 : {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  coach3 : {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
+  }
 }); // lowercase and singular.
 
 
