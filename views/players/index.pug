@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title AFC EAST | Players
+    link(rel="stylesheet", type="text/css", href="/css/layout.css")
+
+  body
+
+    h1
+      a(href="/") AFC EAST
+    button login
+    button register
+    br
+    br
+    a(href="/team") Teams
+    a(href="/players") Players
+    a(href="/coaches") Coaches
+    br
+
+    h2 Players
+
+    each player in players
+      each team in teams
+        h3 #{player.playerName}
+        p #{player.bio}
+        if team.id == player.teamId
+          p played for:
+            a(href="/team/" + team.id)  #{team.teamName}
+        h4
+          a(href="/players/" + player.id) Profile

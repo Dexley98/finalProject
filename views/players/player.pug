@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title AFC EAST | Players
+    link(rel="stylesheet", type="text/css", href="/css/layout.css")
+
+  body
+
+    h1
+      a(href="/") AFC EAST
+    button login
+    button register
+    br
+    br
+    a(href="/team") Teams
+    a(href="/players") Players
+    a(href="/coaches") Coaches
+    br
+
+    h2 #{player.playerName}
+    p image placeholder
+    p #{player.bio}
+    label Stats
+    ul
+      li #{player.stat1}
+      li #{player.stat2}
+      li #{player.stat3}

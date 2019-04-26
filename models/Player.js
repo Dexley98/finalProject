@@ -1,31 +1,40 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../utils/sequelize');
+const Team = require('./Team');
 
-const Product = sequelize.define('product', {
+// const Product = require('./Product');
+
+const Player = sequelize.define('player', {
   id : {
     type: Sequelize.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false
   },
-  productName : {
+  playerName : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  description : {
+  bio : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  image : {
-    // having some trouble understanding sequelizes datatypes from documentation
-    // going to come back to this and try text and/or blob so that image's don't get cut off after limit.
+  stat1 : {
     type: Sequelize.STRING,
     allowNull: false
   },
-  price : {
-    type: Sequelize.DOUBLE,
+  stat2 : {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  stat3 : {
+    type: Sequelize.STRING,
     allowNull: false
   }
 }); // lowercase and singular.
 
-module.exports = Product;
+Player.belongsTo(Team);
+Team.hasMany(Player);
+
+
+module.exports = Player;

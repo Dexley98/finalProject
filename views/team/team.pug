@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title AFC EAST | #{team.teamName}
+    link(rel="stylesheet", type="text/css", href="/css/layout.css")
+
+  body
+    h1
+      a(href="/") AFC EAST
+    button login
+    button register
+    br
+    br
+    a(href="/team") Teams
+    a(href="/players") Players
+    a(href="/coaches") Coaches
+    br
+
+    h2 #{team.teamName}
+    img(src=team.teamLogo width='250' height='250')
+    br
+    h3 History
+    p #{team.history}
+    h3 Present
+    p Record: #{team.record}
+    p Touchdowns: #{team.touchdowns}
+    p total Yards: #{team.totalYards}
+    h3 Notable Players
+    ul
+      each player in players
+        li
+          a(href="/players/" + player.id) #{player.playerName}
+    h3 Notable coaches
+    ul
+      each coach in coaches
+        li
+          a(href="/coaches/" + coach.id) #{coach.coachName}

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title AFC EAST | Teams
+    link(rel="stylesheet", type="text/css", href="/css/layout.css")
+
+  body
+
+    h1
+      a(href="/") AFC EAST
+    button login
+    button register
+    br
+    br
+    a(href="/team") Teams
+    a(href="/players") Players
+    a(href="/coaches") Coaches
+    br
+    h2 HOME
+
+    each team in teams
+      h3
+        a(href="/team/" + team.id) #{team.teamName}
+      h4 Overview
+      p #{team.history}
